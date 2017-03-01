@@ -8,8 +8,8 @@ def extractFile(file,password):
         print("密码错误！",password)
         return
 def main():
-    file=zipfile.ZipFile("1.zip")
-    f=open("dic.txt")
+    file=zipfile.ZipFile("filename.zip")#破解文件名
+    f=open("dic.txt")#打开密码字典
     for line in f.readlines():
         password=line.strip("\n")
         result=extractFile(file,password)
